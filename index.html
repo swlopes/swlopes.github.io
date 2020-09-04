@@ -12,13 +12,14 @@
             height: 100%;
             overflow: auto;
         }
+
         img {
             max-width: 100%;
             max-height: 100%;
             width: auto;
             height: auto;
-            position:absolute;
-            z-index: 0;
+            position: absolute;
+            z-index: 1;
             top: 0%;
             bottom: 0%;
             left: 0%;
@@ -26,10 +27,12 @@
             margin: auto;
             display: block;
         }
-        audio {
-            position: absolute;
-            top: 10%;
-            z-index: 1;
+
+        video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 0;
             display: block;
         }
     </style>
@@ -37,10 +40,20 @@
 </head>
 
 <body>
-    <audio controls preload loop autoplay id="audio1">
+    <audio controls preload loop id="audioHBDay">
         <source src="hbday.ogg" type="audio/ogg">
     </audio>
     <img src="foto01fSmall.png" alt="Minis de Aldonça" title="Minis de Aldonça" />
+    <script>
+        setTimeout(playHBDay, 7000)
+        function playHBDay() {
+            var audioElement = document.getElementById("audioHBDay");
+            if (audioElement.paused)
+                if (confirm("Happy Birthday Deyziza!\nDo you want to play a background music?")) {
+                    audioElement.play();
+                }
+        }
+    </script>
 </body>
 
 </html>
