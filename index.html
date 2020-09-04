@@ -1,39 +1,46 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<title>Happy Birthday Deyziza</title>
+    <title>Happy Birthday Deyziza</title>
 
-<style>
-html,body{
-    margin:0;
-    height:100%;
-    width:100%;
-    overflow:auto;
-}
-img{
-    height:100%;
-    width:auto;
-    z-index:0
-    position:absolute;
-    top:0%; bottom: 0%;
-    left:0%; right: 0%;
-    margin:auto;
-    display: block;
-}
-audio{
-    position:fixed;
-    z-index:1
-}
-
-</style>
+    <style>
+        html,
+        body {
+            margin: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+        }
+        img {
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
+            position:absolute;
+            z-index: 0;
+            top: 0%;
+            bottom: 0%;
+            left: 0%;
+            right: 0%;
+            margin: auto;
+            display: block;
+        }
+        audio {
+            position: absolute;
+            top: 10%;
+            z-index: 1;
+            display: block;
+        }
+    </style>
 
 </head>
 
 <body>
-<audio controls preload loop autoplay id="audio1">
-    <source src="hbday.ogg" type="audio/ogg">
-</audio>
-<img src="foto01fSmall.png" alt="Minis de Aldonça" title="Minis de Aldonça" />
+    <audio controls preload loop autoplay id="audio1">
+        <source src="hbday.ogg" type="audio/ogg">
+    </audio>
+    <img src="foto01fSmall.png" alt="Minis de Aldonça" title="Minis de Aldonça" />
 </body>
 
 </html>
